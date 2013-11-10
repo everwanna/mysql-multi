@@ -1,0 +1,18 @@
+# Site-specific additions and overrides for usr.sbin.mysqld.
+# For more details, please see /etc/apparmor.d/local/README.
+
+######### mysqld1 on port 3307 ###############
+/var/lib/mysql3307/ r,
+/var/lib/mysql3307/** rwk,
+/var/run/mysqld/mysqld.pid3307 rw,
+/var/run/mysqld/mysqld.sock3307 w,
+/run/mysqld/mysqld.pid3307 rw,
+/run/mysqld/mysqld.sock3307 w,
+
+######### mysqld2 on port 3308 ###############
+/var/lib/mysql3308/ r,
+/var/lib/mysql3308/** rwk,
+/var/run/mysqld/mysqld.pid3308 rw,
+/var/run/mysqld/mysqld.sock3308 w,
+/run/mysqld/mysqld.pid3308 rw,
+/run/mysqld/mysqld.sock3308 w,
